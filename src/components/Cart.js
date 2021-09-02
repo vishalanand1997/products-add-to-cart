@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from "react-redux";
-import { IncreaseQuantity, DecreaseQuantity, DeleteCart ,GetAllProduct} from '../actions';
-import { useSelector, useDispatch } from 'react-redux'
+import { IncreaseQuantity, DecreaseQuantity, DeleteCart, GetAllProduct } from '../actions';
+import { useDispatch } from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -33,7 +33,7 @@ function Cart({ items, IncreaseQuantity, DecreaseQuantity, DeleteCart }) {
     }
 
     const dispatch = useDispatch()
-    const Carts = useSelector((state) => state.Products.Carts);
+    // const Carts = useSelector((state) => state.Products.Carts);
     return (
         <>
             <TableContainer component={Paper}>
